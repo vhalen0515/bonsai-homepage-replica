@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bonsai Homepage</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="assets/favicon-logo.svg" type="image/svg+xml" />
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <!-- Desktop Menu -->
+            <div class="desktop-header">
+                <img
+                    class="desktop-logo"
+                    src="assets/bonsai-logo.png"
+                    alt="picture of site logo"
+                />
+                <nav class="desktop-menu">
+                    <ul class="desktop-menu-item-wrapper">
+                        <li>
+                            <button class="desktop-submenu-btn">
+                                <span>Product</span>
+                                <span class="desktop-chevron chevron"
+                                    >&#8250;</span
+                                >
+                            </button>
+                            <ul class="desktop-submenu">
+                                <li class="desktop-submenu-item">
+                                    <h4>Bonsai Workflow</h4>
+                                    <p>
+                                        Organize your business and look
+                                        professional
+                                    </p>
+                                </li>
+                                <li class="desktop-submenu-item">
+                                    <h4>Business Tax</h4>
+                                    <p>
+                                        Maximize write-offs, and estimate and
+                                        save for 1099 taxes
+                                    </p>
+                                </li>
+                                <li class="desktop-submenu-item">
+                                    <h4>Bonsai Cash</h4>
+                                    <p>
+                                        Manage your money with a no-fee business
+                                        account
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="desktop-submenu-btn">
+                                <span>Templates</span>
+                                <span class="desktop-chevron chevron"
+                                    >&#8250;</span
+                                >
+                            </button>
+                            <ul class="desktop-submenu second-menu">
+                                <li class="desktop-submenu-item">
+                                    <img src="assets/contract.svg" />
+                                    <p>Contract Templates</p>
+                                </li>
+                                <li class="desktop-submenu-item">
+                                    <img src="assets/proposal.svg" />
+                                    <p>Proposal Templates</p>
+                                </li>
+                                <li class="desktop-submenu-item">
+                                    <img src="assets/invoice.svg" />
+                                    <p>Invoice Templates</p>
+                                </li>
+                                <li class="desktop-submenu-item">
+                                    <img src="assets/agreement.svg" />
+                                    <p>Agreement Templates</p>
+                                </li>
+                                <li class="desktop-submenu-item">
+                                    <img src="assets/quote.svg" />
+                                    <p>Quote Templates</p>
+                                </li>
+                                <li class="desktop-submenu-item">
+                                    <img src="assets/scope.svg" />
+                                    <p>Scope of Work Templates</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Pricing</li>
+                        <li>Reviews</li>
+                    </ul>
+                </nav>
+                <div class="desktop-menu-btn-container">
+                    <button class="desktop-menu-btn menu-btn">LOG IN</button>
+                    <button class="desktop-menu-btn menu-btn">
+                        START FREE
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Header -->
+            <nav class="mobile-menu-header">
+                <img
+                    class="desktop-logo"
+                    src="assets/bonsai-logo.png"
+                    alt="picture of site logo"
+                />
+                <div class="menu-icon" onclick="toggleMenu(this)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu Layout -->
+            <nav class="mobile-menu-popup">
+                <img src="assets/favicon-logo.svg" alt="company logo" />
+                <ul class="mobile-menu-wrapper">
+                    <li>
+                        <button class="mobile-submenu-btn mobile-menu-link">
+                            <span>Product</span>
+                            <span class="chevron">&#8250;</span>
+                        </button>
+                        <ul class="sub-menu-wrapper first-menu hide">
+                            <li>
+                                <h4>Bonsai Workflow</h4>
+                                <p>
+                                    Organize your business and look professional
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Business Tax</h4>
+                                <p>
+                                    Maximize write-offs, and estimate and save
+                                    for 1099 taxes
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Bonsai Cash</h4>
+                                <p>
+                                    Manage your money with a no-fee business
+                                    account
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="mobile-submenu-btn mobile-menu-link">
+                            <span>Templates</span>
+                            <span class="chevron">&#8250;</span>
+                        </button>
+                        <ul class="sub-menu-wrapper second-menu hide">
+                            <li>
+                                <img src="assets/contract.svg" />
+                                <p>Contract Templates</p>
+                            </li>
+                            <li>
+                                <img src="assets/proposal.svg" />
+                                <p>Proposal Templates</p>
+                            </li>
+                            <li>
+                                <img src="assets/invoice.svg" />
+                                <p>Invoice Templates</p>
+                            </li>
+                            <li>
+                                <img src="assets/agreement.svg" />
+                                <p>Agreement Templates</p>
+                            </li>
+                            <li>
+                                <img src="assets/quote.svg" />
+                                <p>Quote Templates</p>
+                            </li>
+                            <li>
+                                <img src="assets/scope.svg" />
+                                <p>Scope of Work Templates</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-menu-link">Pricing</li>
+                    <li class="mobile-menu-link">Reviews</li>
+                    <li class="mobile-menu-btn-container">
+                        <button class="mobile-menu-btn menu-btn">LOG IN</button>
+                        <button class="mobile-menu-btn menu-btn">
+                            START FREE
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div id="background-image"></div>
+            <section class="price-plans-heading">
+                <h2>Plans & Pricing</h2>
+                <div class="price-plans-toggle-wrapper">
+                    <p id="price-plan-monthly">MONTHLY</p>
+                    <div class="toggle-pill">
+                        <div class="toggle"></div>
+                    </div>
+                    <p id="price-plan-yearly">YEARLY</p>
+                    <img
+                        class="two-months-free-img"
+                        src="assets/2-months-free.png"
+                        alt="advertisement for yearly option"
+                    />
+                </div>
+            </section>
+            <section class="section-card">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <h2 class="card-title">Starter</h2>
+                        <p class="card-description">
+                            Ideal for freelancers and contractors just starting
+                            out.
+                        </p>
+                        <div class="card-price-container">
+                            <p class="card-price">
+                                <span class="starter-price">24</span>/MONTH
+                            </p>
+                            <p class="billed-yearly">Billed yearly</p>
+                        </div>
+                        <div class="card-list">
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">All Templates</li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Unlimited Clients and Projects
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Invoicing & Payments
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Proposals & Contracts
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Tasks & Time Tracking
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">Client CRM</li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">Expense Tracking</li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Up to 5 Project Collaborators
+                                </li>
+                            </div>
+                        </div>
+                        <button class="card-btn">START FREE</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="popular-banner">MOST POPULAR</div>
+                        <h2 class="card-title">Professional</h2>
+                        <p class="card-description">
+                            Everything a growing independent business needs to
+                            thrive.
+                        </p>
+                        <div class="card-price-container">
+                            <p class="card-price">
+                                <span class="professional-price">39</span>/MONTH
+                            </p>
+                            <p class="billed-yearly">Billed yearly</p>
+                        </div>
+                        <div class="card-list">
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Everything in Starter plus...
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">Custom Branding</li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Forms & Questionnaires
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Workflow Automations
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">Client Portal</li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Calendly Integration
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Zapier Integration
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Up to 15 Project Collaborators
+                                </li>
+                            </div>
+                        </div>
+                        <button class="card-btn">START FREE</button>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="card-title">Business</h2>
+                        <p class="card-description">
+                            The perfect package for small businesses and
+                            agencies.
+                        </p>
+                        <div class="card-price-container">
+                            <p class="card-price">
+                                <span class="business-price">79</span>/MONTH
+                            </p>
+                            <p class="billed-yearly">Billed yearly</p>
+                        </div>
+                        <div class="card-list">
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Everything in Starter and Professional
+                                    plus...
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Subcontractor Management
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Hiring Agreement Templates (1099 contracts)
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Subcontractor Onboarding
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">Talent Pool</li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    3 Team Seats (additional seats $9/month)
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Accountant Access
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Connect Multiple Bank Accounts
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Unlimited Subcontractors
+                                </li>
+                            </div>
+                            <div class="card-list-item-container">
+                                <img
+                                    src="assets/checkmark.svg"
+                                    alt="image of a checkmark"
+                                />
+                                <li class="card-list-item">
+                                    Unlimited Project Collaborators
+                                </li>
+                            </div>
+                        </div>
+                        <button class="card-btn">START FREE</button>
+                    </div>
+                </div>
+            </section>
+            <section class="section-add-on">
+                <div class="section-heading">
+                    <h2 class="add-on-heading">
+                        Super charge your work with add-ons
+                    </h2>
+                </div>
+                <div class="add-on-wrapper">
+                    <div class="add-on-container">
+                        <div class="add-on-description-container">
+                            <h4>Collaborators</h4>
+                            <p>
+                                Invite other users to specific projects for
+                                limited access and functionality.
+                            </p>
+                        </div>
+                        <div class="add-on-price-container">
+                            <h4>Free</h4>
+                        </div>
+                    </div>
+                    <div class="add-on-container">
+                        <div class="add-on-description-container">
+                            <h4>Partners</h4>
+                            <p>
+                                Invite other users for full account access and
+                                company management.
+                            </p>
+                        </div>
+                        <div class="add-on-price-container">
+                            <h4>$9</h4>
+                            <p>/MONTH</p>
+                        </div>
+                    </div>
+                    <div class="add-on-container">
+                        <div class="add-on-description-container">
+                            <h4>Bonsai Tax</h4>
+                            <p>
+                                Track expenses, identify write-offs, and
+                                estimate quarterly taxes easily.
+                            </p>
+                            <div class="learn-more-container">
+                                <a class="learn-more-link" href="#"
+                                    >LEARN MORE
+
+                                    <img
+                                        id="learn-more-right-arrow"
+                                        src="assets/right-arrow.svg"
+                                        alt="right arrow"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="add-on-price-container">
+                            <h4>$10</h4>
+                            <p>/MONTH</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-grow-business">
+                <div class="grow-business-container">
+                    <h2>
+                        It’s <span>your</span> business. <br />
+                        We’re here to help it grow.
+                    </h2>
+                    <button>START FREE</button>
+                </div>
+            </section>
+            <section class="section-faq">
+                <div class="faq-container">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-wrapper">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3 class="faq-header">
+                                    How does the free trial work?
+                                </h3>
+                                <img
+                                    class="faq-arrow"
+                                    src="assets/faq-arrow.svg"
+                                    alt="down arrow"
+                                />
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    When you start your trial with Bonsai you'll
+                                    receive full, unlimited access to all of
+                                    Bonsai's Workflow or Workflow Plus Features!
+                                    You will need to enter your credit card
+                                    information to begin your trial, but don't
+                                    worry - we won't charge you anything until
+                                    the subscription ends! If you wish to cancel
+                                    at any time during the trial period, you can
+                                    do so through your Subscriptions Settings
+                                    Page.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3 class="faq-header">
+                                    Can I change plans anytime?
+                                </h3>
+                                <img
+                                    class="faq-arrow"
+                                    src="assets/faq-arrow.svg"
+                                    alt="down arrow"
+                                />
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    Yes, you can from within your account. If
+                                    you have already subscribed to a plan, or
+                                    want to downgrade or upgrade your current
+                                    one, you can do this by going to your
+                                    "Settings" and "Subscription".
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3 class="faq-header">
+                                    How do I pause my Bonsai subscription?
+                                </h3>
+                                <img
+                                    class="faq-arrow"
+                                    src="assets/faq-arrow.svg"
+                                    alt="down arrow"
+                                />
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    We totally understand that with the nature
+                                    of freelancing, work ebbs and flows so you
+                                    might not always need your Bonsai
+                                    subscription to remain active! The good news
+                                    is that you can cancel or pause your monthly
+                                    subscription at any time without penalty.
+                                    Once cancelled, you'll be able to continue
+                                    logging in to access all your documents and
+                                    even continue to use our free features, like
+                                    Time Tracking! In order to cancel your
+                                    subscription, login to your Bonsai account.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3 class="faq-header">
+                                    What is your refund policy?
+                                </h3>
+                                <img
+                                    class="faq-arrow"
+                                    src="assets/faq-arrow.svg"
+                                    alt="down arrow"
+                                />
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    If you contact us within 2 weeks of being
+                                    charged for your subscription, we will be
+                                    happy to issue a refund for you!Beyond those
+                                    2 weeks, you will need to cancel or modify
+                                    the subscription from the Subscriptions Tab
+                                    in Settings to avoid future charges, but
+                                    refunds will not be issued. This applies to
+                                    both monthly and annual plans.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-column">
+                    <h2 class="footer-heading">PRODUCT</h2>
+                    <ul class="footer-item-container">
+                        <li class="footer-item">Proposals</li>
+                        <li class="footer-item">Contracts</li>
+                        <li class="footer-item">Invoicing</li>
+                        <li class="footer-item">Client CRM</li>
+                        <li class="footer-item">Time Tracking</li>
+                        <li class="footer-item">Task Tracking</li>
+                        <li class="footer-item">Forms</li>
+                        <li class="footer-item">Accounting</li>
+                        <li class="footer-item">Bonsai Tax</li>
+                        <li class="footer-item">Bonsai Cash</li>
+                        <br />
+                        <li class="footer-item"><span>Pricing</span></li>
+                        <li class="footer-item">Bonsai Reviews</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-heading">FREE RESOURCES</h2>
+                    <ul class="footer-item-container">
+                        <li class="footer-item">Freelance Resources</li>
+                        <li class="footer-item">Freelance Blog by Bonsai</li>
+                        <li class="footer-item">How to Write a Contract</li>
+                        <li class="footer-item">Online Signature Maker</li>
+                        <br />
+                        <li class="footer-item">Self-Employed Taxes Hub</li>
+                        <li class="footer-item">
+                            Self-Employed Tax Calculator
+                        </li>
+                        <li class="footer-item">Self-Employed Tax</li>
+                        <li class="footer-item">Deductions</li>
+                        <h3 class="footer-subheading">Templates</h3>
+                        <li class="footer-item">Invoice Templates</li>
+                        <li class="footer-item">Proposal Templates</li>
+                        <li class="footer-item">Contract Templates</li>
+                        <li class="footer-item">Agreement Templates</li>
+                        <li class="footer-item">Scope of Work Templates</li>
+                        <li class="footer-item">Quote Templates</li>
+                        <li class="footer-item">Credit Note Templates</li>
+                        <li class="footer-item">Estimate Templates</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-heading">BONSAI</h2>
+                    <ul class="footer-item-container">
+                        <li class="footer-item">About</li>
+                        <li class="footer-item">Careers</li>
+                        <li class="footer-item">Support</li>
+                        <li class="footer-item">LinkedIn</li>
+                        <li class="footer-item">Twitter</li>
+                        <li class="footer-item">Privacy policy</li>
+                        <li class="footer-item">Legal</li>
+                        <br />
+                        <li class="footer-item"></li>
+                        <li class="footer-item">Affiliates</li>
+                        <li class="footer-item">Write for Us</li>
+                        <br />
+                        <li class="footer-item"></li>
+                        <li class="footer-item">Comparisons</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+</html>
