@@ -242,7 +242,8 @@ header img {
 }
 
 .desktop-submenu-item:hover {
-    background: var(--card-bg-clr);
+    background: var(--hover-mobile-menu);
+    /* background: red; */
 }
 
 .desktop-submenu-item::after {
